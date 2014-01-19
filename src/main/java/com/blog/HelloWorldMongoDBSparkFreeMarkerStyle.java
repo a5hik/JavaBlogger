@@ -10,8 +10,6 @@ import spark.Spark;
 
 import java.io.StringWriter;
 import java.net.UnknownHostException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by ashik on 1/18/14 8:43 PM.
@@ -21,7 +19,7 @@ public class HelloWorldMongoDBSparkFreeMarkerStyle {
     public static void main(String args[]) throws UnknownHostException {
 
         final Configuration configuration = new Configuration();
-        configuration.setClassForTemplateLoading(HelloWorldSparkStyle.class, "/");
+        configuration.setClassForTemplateLoading(HelloWorldMongoDBSparkFreeMarkerStyle.class, "/");
 
         MongoClient client = new MongoClient(new ServerAddress("localhost", 27017));
         final DB database = client.getDB("test");

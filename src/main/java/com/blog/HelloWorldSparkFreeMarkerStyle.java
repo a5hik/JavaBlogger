@@ -21,7 +21,7 @@ public class HelloWorldSparkFreeMarkerStyle {
     public static void main(String args[]) {
 
         final Configuration configuration = new Configuration();
-        configuration.setClassForTemplateLoading(HelloWorldSparkStyle.class, "/");
+        configuration.setClassForTemplateLoading(HelloWorldSparkFreeMarkerStyle.class, "/");
 
         Spark.get(new Route("/") {
             @Override
